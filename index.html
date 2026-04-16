@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>For You</title>
+</head>
+<body>
+  <div class="container">
+    <h1>ARE YOU CUPCAKE OF THE EDITOR? 🧁</h1>
+
+    <div class="btn-group">
+      <button class="yes-btn" onclick="goNext()">YES 💖</button>
+      <button class="no-btn" onmouseover="moveButton()">NO 😏</button>
+    </div>
+  </div>
+
+  <script>
+    function goNext() {
+      window.location.href = "cupcake.html";
+    }
+
+    function moveButton() {
+      const btn = document.querySelector(".no-btn");
+
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+
+      btn.style.position = "absolute";
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
